@@ -16,3 +16,6 @@ Use npm package called serve to serve the project in port 8000:
 - serve: `serve -s -l 8000 build`
 
 Test that the project is running by going to <http://localhost:8000>
+
+# Docker hub
+This is the docker hub link <https://hub.docker.com/r/irmindev/curistore-frontend>
