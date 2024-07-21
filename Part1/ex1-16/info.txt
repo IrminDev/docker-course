@@ -1,0 +1,3 @@
+You can find the dockerfile in the folder for the exercise 1.15.
+For this project I only build the react app and run it into the container.
+This is the link to see how the app is working https://curistore-frontend.onrender.com/ (it won't work in some functionalities because the backend is missing)
