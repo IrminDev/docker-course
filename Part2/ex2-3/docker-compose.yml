@@ -1,0 +1,15 @@
+services:
+
+  exercise-2-3-frontend:
+    image: frontend-app
+    build: .
+    ports:
+      - 5000:5000
+    container_name: ex2-3-frontend
+
+  exercise-2-3-backend:
+    image: backend-app
+    build: .
+    ports:
+      - 8080:8080
+    container_name: ex2-3-backend
