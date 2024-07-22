@@ -1,0 +1,9 @@
+services:
+
+  exercise-2-2:
+    image: devopsdockeruh/simple-web-service
+    build: .
+    command: sh -c 'server'
+    ports:
+      - 8000:8000
+    container_name: ex2-2
