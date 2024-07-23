@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: frontend-app
+    build: ./frontend
+    ports:
+      - 5000:5000
+    container_name: ex2-4-frontend
+
+  backend:
+    image: backend-app
+    build: ./backend
+    environment:
+      - REDIS_HOST=cache
+    ports:
+      - 8080:8080
+    container_name: ex2-4-backend
+
+  cache:
+    image: redis
+    container_name: ex2-4-cache
