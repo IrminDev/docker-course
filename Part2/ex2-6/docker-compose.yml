@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres
+    container_name: ex2-6-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=docker_course
+      - POSTGRES_USER=irmindev
+      - POSTGRES_PASSWORD=123456
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  frontend:
+    image: frontend-app
+    build: ./frontend
+    ports:
+      - 5000:5000
+    container_name: ex2-6-frontend
+
+  backend:
+    image: backend-app
+    build: ./backend
+    environment:
+      - REDIS_HOST=cache
+      - POSTGRES_HOST=db
+      - POSTGRES_DATABASE=docker_course
+      - POSTGRES_USER=irmindev
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - 8080:8080
+    container_name: ex2-6-backend
+
+  cache:
+    image: redis
+    container_name: ex2-6-cache
+
+volumes:
+  db-data:
