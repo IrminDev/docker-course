@@ -1,0 +1,1 @@
+The exercise was completed in the ex 2-9. I removed the port map because we didn't need it and I supposed that it was useless if we are using reverse proxy
