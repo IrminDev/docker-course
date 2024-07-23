@@ -1,0 +1,2 @@
+For this exercise I took a project with his back and front. The docker compose run both. 
+Each dockerfile was created for only to setup the project
