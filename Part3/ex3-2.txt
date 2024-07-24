@@ -1,0 +1,3 @@
+Github repo: https://github.com/IrminDev/curi-store
+
+Deploy link: https://curistore-frontend.onrender.com/
