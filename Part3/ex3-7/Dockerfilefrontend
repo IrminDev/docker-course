@@ -1,0 +1,16 @@
+FROM node:16-alpine
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install && npm install -g serve && \ 
+    REACT_APP_BACKEND_URL=http://localhost/api npm run build && \
+    rm -rf node_modules && \
+    adduser -H -D appuser
+
+EXPOSE 5000
+
+USER appuser
+
+CMD ["serve", "-s", "-l", "5000", "build"]
