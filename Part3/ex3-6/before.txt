@@ -1,0 +1,3 @@
+REPOSITORY                    TAG         IMAGE ID       CREATED         SIZE
+backend-app                   latest      8600086ef7dd   3 minutes ago   1.07GB
+frontend-app                  latest      a7aec4edf256   4 minutes ago   485MB
